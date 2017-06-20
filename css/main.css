@@ -1,0 +1,102 @@
+/* Styles for main tags */
+h2 {
+	text-align: center;
+}
+
+body {
+	font-family: 'Acme', sans-serif;
+	color: #72716f;
+	font-size: 16px;
+}
+
+li {
+	margin-left: -30px;
+	height: 25px;
+}
+
+li:hover {
+  background-color: #dcdcdc;
+}
+
+/* Styles for generic classes */
+.remove-padding {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.outline {
+  margin-top: 1em;
+  border: 1px solid #bcbbbb;
+	border-radius: 10px;
+  padding: 1em 1em;
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Styles for specific classes */
+.container {
+	max-width: 800px;
+}
+
+.searchbox {
+  width: 100%;
+  height: 40px;
+}
+
+.list {
+  list-style: none;
+}
+
+.map-container {
+	height: 600px;
+}
+
+/* Styles for specific classes defined in jquery */
+#pano {
+	width: 180px;
+	height: 180px;
+}
+
+#infowindow-header {
+	font-family: 'Acme', sans-serif;
+	color: #72716f;
+	font-size: 16px;
+}
+
+.article {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+/* Chcnges in styles for smaller screens */
+@media screen and (max-width: 750px) {
+	h2 {
+		font-size: 24px;
+	}
+
+	h4 {
+		font-size: 15px;
+	}
+
+	body {
+		font-size: 13px;
+	}
+
+	.map-container {
+		height: 300px;
+	}
+
+	.list-container {
+		height: 120px;
+	}
+
+	#pano {
+		width: 100px;
+		height: 100px;
+	}
+
+	#infowindow-header {
+		font-size: 13px;
+	}
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width,initial-scale=1" name="viewport">
+
+	<title>Neighborhood Map</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+  <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.css">
+</head>
+
+<body>
+  <main class = "container">
+
+		<!-- Page header -->
+		<header>
+      <h2>Tourist Attractions of Kuala Lumpur, Malaysia</h2>
+    </header>
+
+		<!-- Search bar -->
+    <section class = "row">
+      <section class = "col-md-12 col-xs-12 remove-padding">
+        <input class="form-control searchbox outline" type="text" id="search"
+					data-bind="textInput: searchString" placeholder="Search...">
+      </section>
+    </section>
+
+    <section class="row">
+			<!-- Location listing -->
+      <aside class = "col-md-3 col-sm-3 outline list-container" id="searchlist">
+        <h4>Tourist Attractions</h4>
+        <ul class="list" data-bind="foreach: filteredLocations">
+          <li data-bind="text: name, css: { active: active }, click:
+						getMoreInfo"></li>
+        </ul>
+      </aside>
+			<!-- Google map -->
+      <aside class = "col-md-9 col-sm-9">
+        <section class = "map-container outline" id="map">
+        </section>
+      </aside>
+    </section>
+
+		<!-- Displays Wikipedia information about selected tourist attraction -->
+    <section class = "row">
+      <section class = "col-md-12 col-xs-12 outline">
+				<h4>Additional Information</h4>
+        <section class = 'article' data-bind="html: wiki_article">
+        </section>
+      </section>
+    </section>
+  </main>
+
+  <script src="js/libs/jquery.min.js"></script>
+  <script src="js/libs/knockout-3.2.0.js"></script>
+  <script src="js/script.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRrxsEqKWIsdrrm11Ez6OMnlM3ClQQVEg&libraries=geometry&v=3&callback=app"
+		onerror="googleMapsApiErrorHandler();"></script>
+</body>
+</html>
